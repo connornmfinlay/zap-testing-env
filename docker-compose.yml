@@ -1,0 +1,30 @@
+services:
+  spider-site:
+    image: nginx:alpine
+    ports:
+      - "8081:80"
+    volumes:
+      - ./spider-test-site:/usr/share/nginx/html:ro
+    networks:
+      - zapnet
+
+  handgun-site:
+    build:
+      context: ./handgun-site
+    ports:
+      - "8082:80"
+    networks:
+      - zapnet
+
+  zap:
+    image: ghcr.io/zaproxy/zaproxy:stable
+    command: ["zap-webswing.sh"]
+    user: "zap"
+    ports:
+      - "8080:8080"
+      - "8090:8090"
+    networks:
+      - zapnet
+
+networks:
+  zapnet:

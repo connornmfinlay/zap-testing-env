@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>/index.html</loc></url>
+  <url><loc>/about.html</loc></url>
+  <url><loc>/contact.html</loc></url>
+  <url><loc>/blog/</loc></url>
+  <url><loc>/blog/post1.html</loc></url>
+  <url><loc>/blog/post2.html</loc></url>
+  <url><loc>/hidden.html</loc></url>
+  <url><loc>/deep/level1/level2/level3/secret.html</loc></url>
+</urlset>
