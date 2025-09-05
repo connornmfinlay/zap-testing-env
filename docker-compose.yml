@@ -5,26 +5,58 @@ services:
       - "8081:80"
     volumes:
       - ./spider-test-site:/usr/share/nginx/html:ro
-    networks:
-      - zapnet
+    networks: [zapnet]
 
   handgun-site:
     build:
       context: ./handgun-site
     ports:
       - "8082:80"
-    networks:
-      - zapnet
+    networks: [zapnet]
 
   zap:
     image: ghcr.io/zaproxy/zaproxy:stable
     command: ["zap-webswing.sh"]
-    user: "zap"
     ports:
       - "8080:8080"
       - "8090:8090"
+    networks: [zapnet]
+
+  juice-shop:
+    image: bkimminich/juice-shop:latest   
+    ports:
+      - "8083:3000"
+    environment:
+      - NODE_ENV=production
+    networks: [zapnet]
+
+  dvwa:
+    image: vulnerables/web-dvwa:latest    
+    ports:
+      - "8084:80"
+    networks: [zapnet]
+
+  mock-api:
+    build:
+      context: ./api
+    volumes:
+      - ./api/db.json:/data/db.json:ro
+    ports:
+      - "8085:3001"
     networks:
       - zapnet
 
+  bwapp:
+    image: raesene/bwapp:latest
+    container_name: bwapp
+    ports:
+      - "8086:80"           # host -> container
+    volumes:
+      - bwapp-db:/var/lib/mysql   # persist the MySQL data inside the image
+    networks:
+      - zapnet
 networks:
-  zapnet:
+ zapnet: {} 
+
+volumes:
+  bwapp-db:

@@ -1,0 +1,110 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "slug": "bul-tactical-comp",
+      "brand": "BUL Armory",
+      "model": "SAS II Tactical Comp",
+      "type": "2011/Hi-Cap",
+      "caliber": ["9mm"],
+      "barrel": 4.25,
+      "comped": true,
+      "opticsReady": true,
+      "capacity": 17,
+      "weightOz": 36,
+      "msrp": 2999,
+      "notes": "Threaded/compensated configuration; rail; optics-ready (plate system)."
+    },
+    {
+      "id": 2,
+      "slug": "staccato-xc",
+      "brand": "Staccato",
+      "model": "XC",
+      "type": "2011/Hi-Cap",
+      "caliber": ["9mm"],
+      "barrel": 5.0,
+      "comped": true,
+      "opticsReady": true,
+      "capacity": 17,
+      "weightOz": 37.5,
+      "msrp": 4299,
+      "notes": "Integrated compensator/porting; DUO optics system; premium trigger."
+    },
+    {
+      "id": 3,
+      "slug": "staccato-p",
+      "brand": "Staccato",
+      "model": "P",
+      "type": "2011/Hi-Cap",
+      "caliber": ["9mm"],
+      "barrel": 4.4,
+      "comped": false,
+      "opticsReady": true,
+      "capacity": 17,
+      "weightOz": 33.3,
+      "msrp": 2499,
+      "notes": "Duty-oriented configuration; widely used by LE; optics-ready."
+    },
+    {
+      "id": 4,
+      "slug": "cz-shadow2-or",
+      "brand": "CZ",
+      "model": "Shadow 2 Optics-Ready",
+      "type": "DA/SA",
+      "caliber": ["9mm"],
+      "barrel": 4.9,
+      "comped": false,
+      "opticsReady": true,
+      "capacity": 17,
+      "weightOz": 46.5,
+      "msrp": 1399,
+      "notes": "All-steel competition classic; heavy for recoil control."
+    },
+    {
+      "id": 5,
+      "slug": "glock-34-gen5-mos",
+      "brand": "Glock",
+      "model": "34 Gen5 MOS",
+      "type": "Striker",
+      "caliber": ["9mm"],
+      "barrel": 5.31,
+      "comped": false,
+      "opticsReady": true,
+      "capacity": 17,
+      "weightOz": 25.95,
+      "msrp": 749,
+      "notes": "Long-slide 9mm; MOS optics cut; ubiquitous aftermarket."
+    },
+    {
+      "id": 6,
+      "slug": "sig-p320-xfive-legion",
+      "brand": "SIG Sauer",
+      "model": "P320 X-Five Legion",
+      "type": "Striker",
+      "caliber": ["9mm"],
+      "barrel": 5.0,
+      "comped": false,
+      "opticsReady": true,
+      "capacity": 17,
+      "weightOz": 43.5,
+      "msrp": 999,
+      "notes": "TXG tungsten-infused grip for weight; optics-ready; flat trigger."
+    }
+  ],
+  "brands": [
+    { "id": 1, "name": "BUL Armory" },
+    { "id": 2, "name": "Staccato" },
+    { "id": 3, "name": "CZ" },
+    { "id": 4, "name": "Glock" },
+    { "id": 5, "name": "SIG Sauer" }
+  ],
+  "types": [
+    { "id": 1, "name": "2011/Hi-Cap" },
+    { "id": 2, "name": "DA/SA" },
+    { "id": 3, "name": "Striker" }
+  ],
+  "metadata": {
+    "currency": "USD",
+    "disclaimer": "Specs are placeholders from the demo app; verify with manufacturers before publishing."
+  }
+}
