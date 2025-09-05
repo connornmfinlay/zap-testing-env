@@ -99,6 +99,7 @@ flowchart LR
     Z --- D
     Z --- M
     Z --- B
+```
 
 Requirements
 	•	Docker Desktop (or Docker Engine + Compose plugin)
